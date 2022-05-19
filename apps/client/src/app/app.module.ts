@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { CoreDataModule } from '@fem/core-data';
 import { HttpClientModule } from '@angular/common/http';
+import { UiToolbarModule } from '@fem/ui-toolbar';
+import { MaterialModule } from '@fem/material';
 
 @NgModule({
   declarations: [AppComponent],
@@ -11,6 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     HttpClientModule,
     CoreDataModule,
+    UiToolbarModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent],
