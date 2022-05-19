@@ -1,5 +1,5 @@
 <div class="component-container">
-  <div class="list-component">
+  <div class="list-component" *ngIf="widgets$ | async as widgets">
     <fem-widgets-list [widgets]="widgets" [readonly]="true">
     </fem-widgets-list>
   </div>

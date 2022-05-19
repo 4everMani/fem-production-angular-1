@@ -1,4 +1,4 @@
-<div class="component-container">
+<div class="component-container" *ngIf="widgets$ | async as widgets">
   <div class="list-component">
     <fem-widgets-list [widgets]="widgets"
       (selected)="selectWidget($event)"
