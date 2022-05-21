@@ -50,8 +50,9 @@ export class WidgetsComponent implements OnInit {
   }
 
   createWidget(widget: Widget) {
-    const newWidget = Object.assign({}, widget, { id: this.getRandomID()})
+    // const newWidget = Object.assign({}, widget, { id: this.getRandomID()})
     // this.widgets = [...this.widgets, newWidget];
+    this.widgetsService.create(widget);
     this.resetForm();
   }
 
@@ -59,11 +60,13 @@ export class WidgetsComponent implements OnInit {
     // this.widgets = this.widgets.map(w => {
     //   return (widget.id === w.id) ? widget : w;
     // });
+    this.widgetsService.update(widget);
     this.resetForm();
   }
 
   deleteWidget(widget: Widget) {
     // this.widgets = this.widgets.filter(w => widget.id !== w.id);
+    this.widgetsService.delete(widget);
     this.resetForm();
   }
 

@@ -1,5 +1,5 @@
 export interface BaseEntity {
-  id: string | null;
+  id: string | undefined;
 }
 
 export interface Widget extends BaseEntity {
