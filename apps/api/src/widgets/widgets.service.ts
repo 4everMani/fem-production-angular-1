@@ -20,6 +20,7 @@ export class WidgetsService {
 
   create(widget: Widget) {
     this.mockWidgets = [...this.mockWidgets, Object.assign({}, widget, { id: uuidv4() })];
+    console.log(this.mockWidgets)
     return this.mockWidgets;
   }
 
